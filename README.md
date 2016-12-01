@@ -1,6 +1,6 @@
 # App Coordinators in iOS
 
-
+`Coordinators` can help declutter the view controllers by moving navigation-related tasks into these objects. Coordinators are responsible for instantiating view controllers and presenting them.
 
 ## Responsibilities
 
@@ -22,6 +22,7 @@
 
 ## Notes
 * A view controller has an accompanying `coordinator`.
+* The app delegate also has a top-level `appCoordinator`.
 * A view controller declares public `closures` which the coordinator can subscribe to and react accordingly.
 * A coordinator has a `navigationController` where a new view controller will spawn from. Can be replaced by any view controller, I suppose.
 * A coordinator has a `childCoordinators` array where we hold strong references to child coordinators preventing them from deallocating.
