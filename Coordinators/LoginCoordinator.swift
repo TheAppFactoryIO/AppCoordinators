@@ -21,6 +21,20 @@ class LoginCoordinator: NSObject {
     
     func start() {
         let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        loginViewController.didTapLogin = showContent
+        loginViewController.didAppear = cleanUp
         self.navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
+    func showContent() {
+        let contentCoordinator = ContentCoordinator(navigationController: self.navigationController!)
+        contentCoordinator.start()
+        self.childCoordinators?.addObject(contentCoordinator)
+    }
+    
+    func cleanUp() {
+        if let childCoordinators = self.childCoordinators {
+            childCoordinators.removeLastObject()
+        }
     }
 }

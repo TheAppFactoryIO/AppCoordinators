@@ -16,9 +16,6 @@ class AppCoordinator: NSObject {
         super.init()
         self.navigationController = navigationController
         self.childCoordinators = []
-        
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setBool(false, forKey: "loggedIn")
     }
     
     func start() {

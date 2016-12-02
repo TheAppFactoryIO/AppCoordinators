@@ -122,23 +122,40 @@
                                     <action selector="loginButtonTapped:" destination="ILz-oW-h9p" eventType="touchUpInside" id="KsY-54-rbl"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLj-jG-ArQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-x8-ZVZ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jMY-4f-ee4" firstAttribute="trailing" secondItem="DFh-qs-HUS" secondAttribute="trailing" id="1TM-WU-qgn"/>
                             <constraint firstItem="SVz-l1-5gf" firstAttribute="centerX" secondItem="1SX-PR-miA" secondAttribute="centerX" id="BVb-W9-ZG9"/>
+                            <constraint firstItem="8XT-x8-ZVZ" firstAttribute="centerY" secondItem="1SX-PR-miA" secondAttribute="centerY" id="Cty-Wg-pIy"/>
+                            <constraint firstItem="mLj-jG-ArQ" firstAttribute="leading" secondItem="1SX-PR-miA" secondAttribute="leading" id="Gyd-vp-c8E"/>
                             <constraint firstAttribute="trailing" secondItem="SVz-l1-5gf" secondAttribute="trailing" constant="20" id="HbH-qO-xCi"/>
+                            <constraint firstItem="8XT-x8-ZVZ" firstAttribute="centerX" secondItem="1SX-PR-miA" secondAttribute="centerX" id="IvB-mM-ioT"/>
                             <constraint firstItem="jMY-4f-ee4" firstAttribute="leading" secondItem="DFh-qs-HUS" secondAttribute="leading" id="KTg-gd-KF9"/>
                             <constraint firstItem="SVz-l1-5gf" firstAttribute="centerY" secondItem="1SX-PR-miA" secondAttribute="centerY" id="KWA-rl-Ld7"/>
                             <constraint firstItem="SVz-l1-5gf" firstAttribute="leading" secondItem="1SX-PR-miA" secondAttribute="leading" constant="20" id="MPv-4A-dzT"/>
+                            <constraint firstAttribute="bottom" secondItem="mLj-jG-ArQ" secondAttribute="bottom" id="Olo-Ov-DAv"/>
                             <constraint firstItem="jMY-4f-ee4" firstAttribute="top" secondItem="DFh-qs-HUS" secondAttribute="bottom" constant="10" id="Osy-M3-4ov"/>
+                            <constraint firstItem="mLj-jG-ArQ" firstAttribute="top" secondItem="1SX-PR-miA" secondAttribute="top" id="PPG-Cs-N8T"/>
                             <constraint firstItem="DFh-qs-HUS" firstAttribute="trailing" secondItem="SVz-l1-5gf" secondAttribute="trailing" id="cc2-p3-hmt"/>
+                            <constraint firstAttribute="trailing" secondItem="mLj-jG-ArQ" secondAttribute="trailing" id="htr-lm-th6"/>
                             <constraint firstItem="DFh-qs-HUS" firstAttribute="leading" secondItem="SVz-l1-5gf" secondAttribute="leading" id="pvj-Qt-fWm"/>
                             <constraint firstItem="DFh-qs-HUS" firstAttribute="centerX" secondItem="SVz-l1-5gf" secondAttribute="centerX" id="weG-3j-Di1"/>
                             <constraint firstItem="DFh-qs-HUS" firstAttribute="top" secondItem="SVz-l1-5gf" secondAttribute="bottom" constant="10" id="xGC-15-NCu"/>
                             <constraint firstItem="jMY-4f-ee4" firstAttribute="centerX" secondItem="DFh-qs-HUS" secondAttribute="centerX" id="y41-0k-T6m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8XT-x8-ZVZ" id="WeF-7B-5Xg"/>
+                        <outlet property="overlayView" destination="mLj-jG-ArQ" id="ZV3-WS-hxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awg-Bz-yFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
